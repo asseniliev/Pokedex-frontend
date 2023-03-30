@@ -1,0 +1,1 @@
+export default 'https://pokedex-backend-eight.vercel.app';

@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Pokemon from '../components/Pokemon'
 import Button from '../components/NextBtn'
 import { useEffect, useState } from "react";
+import backendUrl from '../modules/backendUrl';
 
 function Home() {
 
@@ -14,7 +15,7 @@ function Home() {
   async function fetchNewPokemons() {
     const start = pokemonCurrentNumber + 1;
     const end = pokemonCurrentNumber + 15;
-    const url = `http://localhost:3000/pokemons/${start}/${end}`;
+    const url = `${backendUrl}/pokemons/${start}/${end}`;
     const data = await (await fetch(url)).json();
     setPokemonsArray([...pokemonsArray, ...data.pokemons]);
     setPokemonCurrentNumber(pokemonCurrentNumber + 15);
@@ -24,7 +25,7 @@ function Home() {
   useEffect(() => {
     const start = 1;
     const end = 15;
-    const url = `http://localhost:3000/pokemons/${start}/${end}`;
+    const url = `${backendUrl}/pokemons/${start}/${end}`;
     console.log(url);
     fetch(url)
       .then(res => res.json())
