@@ -7,18 +7,19 @@ export default function Pokemon(props) {
   //props.imgSrc - the url to the pokemon image
 
   const pokemonType = props.type;
+  console.log(pokemonType);
 
   return (
 
-    <div className={[styles.pokemon, styles[{ pokemonType }]]}>
+    <div className={`${styles.pokemon} ${styles[pokemonType]}`}>
       <div className={styles.imgContainer}>
-        <Image src={props.imgSrc} alt={props.name} width={120}
-          height={120}
+        <img src={props.imgSrc}
+          alt={props.name}
         />
       </div>
-      <div className="info">
-        <h3 className="name">{props.name}</h3>
-        <span className="type">Type: <span>{pokemonType}</span></span>
+      <div className={styles.info}>
+        <h3 className={styles.name}>{props.name}</h3>
+        <span className={styles.type}>Type: <span>{pokemonType}</span></span>
       </div>
     </div>
 

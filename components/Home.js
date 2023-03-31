@@ -24,7 +24,7 @@ function Home() {
 
   useEffect(() => {
     const start = 1;
-    const end = 15;
+    const end = 10;
     const url = `${backendUrl}/pokemons/${start}/${end}`;
     console.log(url);
     fetch(url)
