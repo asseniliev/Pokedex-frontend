@@ -10,7 +10,7 @@ This repository is the frontend of the application.
 
 Front page:
 
-![Pokedex](/frontPage.jpg)
+![Pokedex](frontPage.jpg)
 
 Functionality available:
 1. The front page calls the backend which, in return calls pokeapi.co API containing data for pokemons cards. The backend then returns a json with data back to the frontend.
