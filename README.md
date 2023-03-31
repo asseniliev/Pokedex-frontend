@@ -1,39 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pokedex-React
 
-## Getting Started
+[Link to Vercel deployment](https://pokedex-frontend-ten.vercel.app/)
 
-First, run the development server:
+Pokedex-React is a remake of the Pokedex-DOM page using React library and NEXT.JS framework for the frontend and Express framework for the backend.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+This repository is the frontend of the application. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Link to the backend github repository](https://github.com/asseniliev/Pokedex-backend)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Front page:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+![Pokedex](/frontPage.jpg)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Functionality available:
+1. The front page calls the backend which, in return calls pokeapi.co API containing data for pokemons cards. The backend then returns a json with data back to the frontend.
+2. At page load the js fetches data for 15 cards from the API
+3. Pressing the 'Next' button fetches other 15 cards
+4. The fetch takes place in sequence, starting from card No.1, then going to card No.2 and so on
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Pokedex-frontend
+Skills trained and exercised:
+1. Deploy a frontend using NEXT.JS
+2. Deploy backend using Express framework
+3. Call backend routes and receive backend data
+4. Fetch data from external API and return json result
+5. Implement React components with corresponding css style
+6. Work with useState and useEffect hooks

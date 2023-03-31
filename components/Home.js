@@ -10,7 +10,6 @@ function Home() {
 
   const [pokemonsArray, setPokemonsArray] = useState([]);
   const [pokemonCurrentNumber, setPokemonCurrentNumber] = useState(0);
-  const [fetchComplete, setFetchComplete] = useState(false);
 
   async function fetchNewPokemons() {
     const start = pokemonCurrentNumber + 1;
@@ -24,7 +23,7 @@ function Home() {
 
   useEffect(() => {
     const start = 1;
-    const end = 10;
+    const end = 15;
     const url = `${backendUrl}/pokemons/${start}/${end}`;
     console.log(url);
     fetch(url)
